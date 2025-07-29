@@ -7,10 +7,12 @@ class NumericalCSVFile(CSVFile):
         for i, elementi in enumerate(dati_as_float):
             if i != 0:
                 for j,e in enumerate(elementi):
+                    if j == 0:
+                        continue
                     try:
                         dati_as_float[i][j] = float(e)
                         # print(e)
-                        print(type(dati_as_float[i][j]))
+                        # print(type(dati_as_float[i][j]))
                     # print(elementi)
 
                     except Exception as errore:
